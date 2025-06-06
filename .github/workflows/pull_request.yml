@@ -20,3 +20,9 @@ jobs:
           cache: maven
       - name: Build and test
         run: mvn clean install --batch-mode --no-transfer-progress
+      - name: Publish
+        env:
+          OSSRH_USERNAME: ${{ secrets.SONATYPE_OSSRH_USERNAME }}
+          OSSRH_PASSWORD: ${{ secrets.SONATYPE_OSSRH_PASSWORD }}
+        run: |
+          mvn clean deploy --settings .mvn/settings.xml -Dgpg.skip=false -Dmaven.test.skip=true -B            
