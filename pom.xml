@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.hisp.dhis</groupId>
+    <groupId>run.clickn.dhis</groupId>
     <artifactId>json-tree</artifactId>
     <packaging>jar</packaging>
     <name>DHIS JSON Tree</name>
